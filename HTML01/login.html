@@ -1,18 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    <style>
+        .log{
+            border: 2px solid black;
+            width: 300px;
+            height: 130px;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            border-radius: 10px 25px 25px 25px;
+            background-color: rgb(129, 129, 168);
+        }
+
+        #lobu{
+           width: 100px;
+           height: 50px;
+           font-size: 15px;
+           background-color: green;
+           border-radius: 25px 25px 25px 25px;
+        }
+        #res{
+           width: 100px;
+           height: 50px;
+           background-color: green;
+           border-radius: 25px 25px 25px 25px;
+        }
+        #res:hover{
+           width: 90px;
+           height: 50px;
+           font-size: 15px;
+           background-color: rgb(255, 2, 2);
+           border-radius: 25px 25px 25px 25px;
+        }
+        form input{
+            border-radius: 25px;
+        }
+    </style>
 </head>
 <body>
     <center><h1>Welcome to login page</h1></center>
    <hr>
+   <div class="log">
    <form>
-    <input type="text" placeholder="Username">
-    <input type="password"placeholder="Enter Password">
-    <button type="button">Login</button>
-    <button type="button">Reset</button>
+    <input type="text" placeholder="Username"><br>
+    <input type="password"placeholder="Enter Password" id="log"><br>
+    <button type="button" id="lobu">Login</button>
+    <button type="button" id="res">Reset</button>
   </form>
+</div>
 </body>
 </html>
