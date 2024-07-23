@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+           function cal(){
+            let a=parseInt(document.getElementById("n1").value);
+            let res="";
+            let count=0;
+            for(let i=1;i<=a;i++){
+                if(a%i==0){
+                    count++;
+                }
+            }
+            if(count==2){
+                document.write("Prime");
+            }
+            else{
+                document.write("Not a prime");
+            }
+            document.getElementById("resdiv").innerHTML=res;
+           }
+        </script>
+    </head>
+    <body>
+        Enter First Number <input type="text" id="n1"/><br>
+            
+             <button onclick="cal()">Check</button>
+             <br>
+             <div id="resdiv">
+                
+             </div>
+    </body>
+</html>

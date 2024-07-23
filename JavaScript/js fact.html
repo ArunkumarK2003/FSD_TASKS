@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+            
+        </style>
+        <script>
+           function cal(){
+            let a=parseInt(document.getElementById("n1").value);
+            let fact=1;
+            for(let i=1;i<=a;i++){
+            fact*=i;
+        }
+        document.getElementById("fac").innerHTML="Factorial of "+a+" Is "+fact;
+           }
+
+        </script>
+    </head>
+    <body>
+        <b>Enter First Number <input type="text" id="n1" placeholder="Enter the Number" onfocus="this.value=''"onblur="cal()"/></b><br>
+             <button onclick="cal()">Calculate</button>
+
+             <br>
+             <div id="fac">
+             </div>
+    </body>
+</html>

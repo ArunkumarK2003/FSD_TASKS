@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script>
+           function cal(){
+            let a=parseInt(document.getElementById("n1").value);
+            let b=parseInt(document.getElementById("n2").value);
+            let op=document.getElementById("op").value;
+
+            let res="";
+            if(op=="add"){
+                res="Addition:"+(a+b);
+            }
+            if(op=="sub"){
+                res="Subtraction:"+(a-b);
+            }
+            if(op=="mul"){
+                res="Multiplication:"+(a*b);
+            }
+            if(op=="div"){
+                res="Division:"+(a/b);
+            }
+            document.getElementById("resdiv").innerHTML=res;
+           }
+        </script>
+    </head>
+    <body>
+        Enter First Number <input type="text" id="n1"/><br>
+        Enter Second Number <input type="text" id="n2"/><br>
+             Select the operation <select id="op">
+                <option value="add">add</option>
+                <option value="sub">sub</option>
+                <option value="mul">mul</option>
+                <option value="div">div</option>
+             </select>
+             <button onclick="cal()">Calculate</button>
+
+             <br>
+             <div id="resdiv">
+                
+             </div>
+    </body>
+</html>
