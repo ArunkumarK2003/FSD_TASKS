@@ -1,0 +1,33 @@
+<html>
+    <head><title>array</title>
+   
+    </head>
+    <body>
+        <script>
+               const sum=()=>10+20;
+               document.write("<br>Addition:"+sum());
+               const sub=(x,y)=>x-y;
+               document.write("<br>Subtraction:"+sub(18,3));
+               const mul=(x,y)=>{return (x*y)};
+               document.write("<br>Multiplication:"+mul(18,3));
+               const div=(x,y)=>x/y;
+               document.write("<br>division:"+div(18,3));
+               const big=(x,y)=>{
+                if(x>y)
+                    return x;
+                else
+                    return y;
+               };
+               document.write("<br> Biggest number:"+big(10,20));
+               const facts=(x)=>{
+               let fact=1;
+                for(let i=1;i<=x;i++){
+                    fact=fact*i;
+                                }
+                                return fact;
+               }
+               
+               document.write("<br>Factorial of:"+facts(5));
+        </script>
+    </body>
+</html>

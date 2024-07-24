@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task4</title>
+    <style>
+        .main{
+            border: 2px solid black;
+            width: 20vw;
+            height: 60vh;
+            display: flex;
+            border-radius: 5px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #808080;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .enter{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .enter input {
+            font-size: 27px;
+            width: 80%;
+            padding: 10px;
+        }
+        .btns{
+            display: grid;
+            grid-template-columns:auto auto auto auto;
+            padding: 10px;
+            gap: 10px;
+        }
+       
+        button{
+            width: 60px;
+            height:60px;
+            border-radius: 8px;
+            color:black;
+            border-bottom: 2px solid white;
+            border-right: 2px solid white;
+            border: 2px solid black;
+            font-size: 25px;    
+            background-color: aqua;
+        }
+        
+
+        input{
+            background-color: rgb(57, 80, 57);
+            color: white;
+        }    
+    </style>
+    <script>
+        function clrscrn(){
+            document.getElementById("res").value = "";
+        }
+        function val(value){
+            document.getElementById("res").value += value;
+        }
+        function cal(){
+            try {
+                const result = eval(document.getElementById("res").value);
+                document.getElementById("res").value = result;
+            } catch (exception) {
+                document.getElementById("res").value = "NaN";
+            }
+        }
+        function bac(){
+            let bc = document.getElementById("res");
+            bc.value = bc.value.slice(0, -1);
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <div class="enter">
+            <input type="text" placeholder="Enter the Number" id="res"/>
+        </div>
+        <div class="btns">
+            <button onclick="clrscrn()">C</button>
+            <button onclick="val('%')">%</button>
+            <div class="btn"><button onclick="bac()"><=</button></div>
+            <div class="btn"><button onclick="val('/')">/</button></div>
+            <div class="btn"><button onclick="val('7')">7</button></div>
+            <div class="btn"><button onclick="val('8')">8</button></div>
+            <div class="btn"><button onclick="val('9')">9</button></div>
+            <div class="btn"><button onclick="val('*')">*</button></div>
+            <div class="btn"><button onclick="val('4')">4</button></div>
+            <div class="btn"><button onclick="val('5')">5</button></div>
+            <div class="btn"><button onclick="val('6')">6</button></div>
+            <div class="btn"><button onclick="val('-')">-</button></div>
+            <div class="btn"><button onclick="val('1')">1</button></div>
+            <div class="btn"><button onclick="val('2')">2</button></div>
+            <div class="btn"><button onclick="val('3')">3</button></div>
+            <div class="btn"><button onclick="val('+')">+</button></div>
+            <div class="btn"><button onclick="val('00')">00</button></div>
+            <div class="btn"><button onclick="val('0')">0</button></div>
+            <div class="btn"><button onclick="val('.')">.</button></div>
+            <div class="btn"><button onclick="cal()" id="equ">=</button></div>
+        </div>
+    </div>
+</body>
+</html>

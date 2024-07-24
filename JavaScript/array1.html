@@ -1,0 +1,25 @@
+<html>
+    <head><title>array</title>
+    <script>
+        function myf(){
+            let sk=["C","C++","Java","Python"];
+            document.write("<br>Array list:"+sk);
+            document.write("<br>Array length:"+sk.length);
+            document.write("<br>First element:"+sk[0]);
+            document.write("<br>Last element:"+sk[sk.length-1])
+            sk.push(".net");
+            document.write("<br>Arrays Elements After push:"+sk);
+            sk.pop();
+            document.write("<br>after pop:"+sk);
+            document.write("<br>Array elements:");
+            for(let i=0;i<sk.length;i++){
+                document.write("<br>"+sk[i]);
+            }
+
+        }
+    </script>
+    </head>
+    <body onload="myf()">
+        
+    </body>
+</html>
