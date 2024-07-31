@@ -10,8 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { AngulService } from './angul.service';
 
-
-  const ROUTES:Routes=[
+const ROUTES:Routes=[
     {path : 'home', component:HomeComponent},
     {path:'contact', component:ContactComponent},
     {path:'about', component:AboutComponent}
@@ -37,6 +36,4 @@ import { AngulService } from './angul.service';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
-  
-}
+export class AppModule { }

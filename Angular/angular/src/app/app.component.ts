@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AngulService } from './angul.service';
+import { MultiService } from './multi.service';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ export class AppComponent {
   myStyle:{};
   myClass:string;
   sum:number;
-  constructor(private calc :AngulService){
+  multi:number;
+  constructor(private calc :AngulService,private ne:MultiService){
     this.sum=calc.getAddition(10,20);
     this.name = "Arun";
     this.age = 20;
@@ -30,6 +32,7 @@ export class AppComponent {
     this.selec="";
     this.myStyle={'width':'40%','height':'40%','border':'2px solid green','border-radius':'25px'}
     this.myClass="MyClass1";
+    this.multi=ne.getMulti(10,20);
     }
   changename(){
     this.name="aun";
