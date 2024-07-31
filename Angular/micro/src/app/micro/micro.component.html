@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Car Parking</title>
+</head>
+<body>
+    <div cls="fil">
+    <div class="he1">
+    <h1>Parking Management System</h1>
+</div>
+<br>
+<b><div class="cont">
+    Plate No. <input type="text"[value]="PlateNo" placeholder="Plate Number"><br> 
+    Phone No. <input type="text" [value]="phoneNo" placeholder="Contact"><br>
+    Car Colour <input type="text" [value]="colorOfTheCar" placeholder="Color of Car"><br>
+    In-Time(HH/MM) <input type="text" [value]="durationIn" placeholder="In-Time"><br>
+    Out-Time(HH/MM) <input type="text" [value]="durationOut" placeholder="Out-Time"><br>
+    <div class="btn">
+    <button (click)="entry()">Entry</button>
+    <button (click)="clear()">Clear</button>
+</div>
+</div>
+</b>
+</div>
+</body>
+</html>
