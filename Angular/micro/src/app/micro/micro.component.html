@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Car Parking</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Car Parking</title>
 </head>
 <body>
-    <div cls="fil">
+  <div class="fil">
     <div class="he1">
-    <h1>Parking Management System</h1>
-</div>
-<br>
-<b><div class="cont">
-    Plate No. <input type="text"[value]="PlateNo" placeholder="Plate Number"><br> 
-    Phone No. <input type="text" [value]="phoneNo" placeholder="Contact"><br>
-    Car Colour <input type="text" [value]="colorOfTheCar" placeholder="Color of Car"><br>
-    In-Time(HH/MM) <input type="text" [value]="durationIn" placeholder="In-Time"><br>
-    Out-Time(HH/MM) <input type="text" [value]="durationOut" placeholder="Out-Time"><br>
-    <div class="btn">
-    <button (click)="entry()">Entry</button>
-    <button (click)="clear()">Clear</button>
-</div>
-</div>
-</b>
-</div>
+      <h1>Parking Management System</h1>
+    </div>
+    <br>
+    <div class="cont">
+      <label for="pla">Plate No.</label>
+      <input type="text" id="pla" placeholder="Plate Number" [(ngModel)]="pla" /><br>
+      <label for="poh">Phone No.</label>
+      <input type="text" id="poh" [(ngModel)]="poh" placeholder="Contact"><br>
+      <label for="col">Car Colour</label>
+      <input type="text" id="col" [(ngModel)]="col" placeholder="Color of Car"><br>
+      <label for="in">In-Time(HH/MM)</label>
+      <input type="text" id="in" [(ngModel)]="in" placeholder="In-Time"><br>
+      <label for="out">Out-Time(HH/MM)</label>
+      <input type="text" id="out" [(ngModel)]="out" placeholder="Out-Time"><br>
+      <div class="btn">
+        <button (click)="disp()">Entry</button>
+        <button (click)="clear()">Clear</button>
+        <button>For Find</button>
+      </div>
+    </div>
+    <br>
+    <div class="display">
+      <p>{{dispal}} - {{disin}} - {{disout}} - {{dispoh}} - {{discol}}</p>
+    </div>
+  </div>
 </body>
 </html>

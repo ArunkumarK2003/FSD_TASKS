@@ -5,7 +5,6 @@
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 30px;
-    
     align-items: center;
     color: whitesmoke;
     background-color: black;
@@ -41,6 +40,7 @@ input:hover{
     align-items: center;
     flex-direction: column;
     color: rgb(198, 198, 198);
+
 }
 button{
     color: red;
@@ -67,5 +67,14 @@ body{
     background: url("Park.jpg") no-repeat;
     background-size:cover;
     background-position: center;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+.display{
+    border: 2px solid white;
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   align-items: center;
 }

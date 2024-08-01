@@ -5,29 +5,33 @@ import { Component } from '@angular/core';
   templateUrl: './micro.component.html',
   styleUrls: ['./micro.component.css']
 })
+
 export class MicroComponent {
-  PlateNo: string;
-  durationIn: string;
-  durationOut: string;
-  phoneNo: string;
-  colorOfTheCar: string;
+  pla: string='';
+  in: string='';
+  out: string='';
+  poh: string='';
+  col: string=''; 
 
-  constructor() {
-    this.PlateNo = "TN39AV0066";
-    this.phoneNo = "9123456780";
-    this.durationIn = "10";
-    this.durationOut = "20";
-    this.colorOfTheCar = "neon";
-  }
-
-  entry() {
-    alert("Please park at Slot 2 and floor 1");
-  }
-
+  dispal:string='';
+  disin:string='';
+  disout:string='';
+  dispoh:string='';
+  discol:string='';
+  
   clear() {
-    this.PlateNo = "";
-    this.phoneNo = "";
-    this.durationIn = "";
-    this.durationOut = "";
-    this.colorOfTheCar = "";  }
+    this.pla = "";
+    this.poh = "";
+    this.in = "";
+    this.out = "";
+    this.col = ""; 
+  }
+  
+  disp(){
+    this.dispal=this.pla;
+    this.disin=this.in;
+    this.disout=this.out;
+    this.dispoh=this.poh;
+    this.discol=this.col;
+  }
 }
